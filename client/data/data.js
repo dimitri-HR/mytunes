@@ -21,3 +21,20 @@ var songData = [
     artist: 'Aaliyah',
   }
 ];
+var qData = [
+  {
+    url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3',
+    title: 'Dima In A Million',
+    artist: 'Aaliyah',
+  },
+  {
+    url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/03+Age+Ain%27t+Nothing+But+A+Number.mp3',
+    title: 'Dima Ain\'t Nothing But A Number',
+    artist: 'Aaliyah',
+  },
+  {
+    url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/05+Hot+Like+Fire.mp3',
+    title: 'Dima Like Fire',
+    artist: 'Aaliyah',
+  }
+];

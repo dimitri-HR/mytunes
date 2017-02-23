@@ -1,4 +1,5 @@
-// LibraryEntryView.js - Defines a backbone view class for the entries that will appear within the library views. These will be inserted using the "subview" pattern.
+// LibraryEntryView.js - Defines a backbone view class for the entries that will
+// appear within the library views. These will be inserted using the "subview" pattern.
 var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
@@ -6,9 +7,17 @@ var LibraryEntryView = Backbone.View.extend({
   template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
 
   events: {
-    'click': function() {
-      this.model.play();
-    }
+    'click': 'onClick'
+      // this.model.play();
+  },
+
+  onClick: function () {
+    console.log('You clicked LibraryEntryView');
+    // remove from library
+    this.$el.detach();
+    // -> enqueu to SongQ
+
+
   },
 
   render: function() {
