@@ -4,11 +4,10 @@ var LibraryView = Backbone.View.extend({
   tagName: 'table',
 
   initialize: function() {
-    console.log('LibraryView this.model = ', this.model);
-    console.log('LibraryView this = ', this);
-    console.log('LibraryView this.collection = ', this.collection);
     this.render();
 
+    // A `sync` event is emitted when the request sent by `fetch` is successful
+    this.collection.on('sync', this.render, this);
   },
 
   render: function() {
@@ -18,7 +17,6 @@ var LibraryView = Backbone.View.extend({
 
     this.$el.html('<th>Library</th>').append(
       this.collection.map(function(song) {
-        console.log('song', song);
         return new LibraryEntryView({model: song}).render();
       })
     );
